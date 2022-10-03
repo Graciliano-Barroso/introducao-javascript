@@ -11,6 +11,22 @@ let altura = tdAltura.textContent;
 
 let tdImc = document.querySelector(".info-imc");
 
-let imc = peso / (altura * altura);
+let pesoValido = true;
+let alturaValida = true;
 
-tdImc.textContent = imc;
+if(peso <= 0 || peso >= 1000) {
+    pesoValido = false;
+    tdImc.textContent = "Peso inválido!";
+} 
+
+if(altura <= 0 || altura >= 1000) {
+    alturaValida = false;
+    tdImc.textContent = "Altura inválida!";
+}
+
+if(alturaValida && pesoValido) {
+    let imc = peso / (altura * altura);
+    tdImc.textContent = imc;
+}
+
+
