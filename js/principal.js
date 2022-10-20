@@ -39,7 +39,21 @@ for(let i = 0; i < paciente.length; i++) {
 let botaoAdicionar = document.querySelector('#adicionar-paciente');
 botaoAdicionar.addEventListener('click', (event)=> {
     event.preventDefault();
+
+    let form = document.querySelector("#form-adiciona");
+
+    let nome = form.nome.value;
+    let peso = form.peso.value;
+    let altura = form.altura.value;
+    let gordura = form.gordura.value;
+
+    console.log(nome);
+    console.log(peso);
+    console.log(altura);
+    console.log(gordura);
 })
+
+
 
 
 
