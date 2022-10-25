@@ -4,7 +4,12 @@ botaoAdicionar.addEventListener('click', (event)=> {
 
     let form = document.querySelector("#form-adiciona");
     let paciente = obtemPacienteDoFormulario(form);
-    let pacienteTr = montaTr(paciente);   
+    let pacienteTr = montaTr(paciente); 
+    
+    if(!validaPaciente(paciente)){
+        return;
+    }
+
     let tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTr);
@@ -44,4 +49,12 @@ function montaTd(dado,classe){
     td.textContent = dado;
     td.classList.add(classe);
     return td;
+}
+
+function validaPaciente (paciente){
+    if(validaPeso(pacient.peso)){
+        return true;
+    }else{
+        return false;
+    }
 }
