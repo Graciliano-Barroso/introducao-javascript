@@ -1,16 +1,20 @@
 let tabela = document.querySelector('table');
 
 tabela.addEventListener('dblclick', (event)=> {
+
+    event.target.parentNode.classList.add('fadeOut');
+
+    setTimeout( ()=> {
+        event.target.parentNode.remove();
+    }, 500);
+
+    
+
+    /* let alvoEvento1 = event.target;
+    let paiDoAlvo1 = alvoEvento1.parentNode;
+    paiDoAlvo1.classList.add('fadeOut');
+
     let alvoEvento = event.target;
     let paiDoAlvo = alvoEvento.parentNode;
-    paiDoAlvo.remove();
+    paiDoAlvo.remove(); */
 });
-
-/* let pacientes = document.querySelectorAll('.paciente');
-
-pacientes.forEach( (paciente)=> {
-    paciente.addEventListener('dblclick', ()=> {
-        console.log("fui clicado com um duplo click");
-        paciente.remove();
-    });
-}); */
