@@ -6,9 +6,7 @@ tabela.addEventListener('dblclick', (event)=> {
 
     setTimeout( ()=> {
         event.target.parentNode.remove();
-    }, 500);
-
-    
+    }, 500);    
 
     /* let alvoEvento1 = event.target;
     let paiDoAlvo1 = alvoEvento1.parentNode;
